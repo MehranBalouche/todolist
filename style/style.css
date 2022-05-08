@@ -10,18 +10,21 @@ html{
 
 .header-image-logo{
     width: 2rem;
-        height: 2rem;
-        margin: 0.5rem;
-        line-height: 2.1rem;
-        text-align: center;
-        border-radius: 50px;
+    height: 2rem;
+    margin: 0.5rem;
+    line-height: 2.1rem;
+    text-align: center;
+    border-radius: 50px;
+}
+.display-flex{
+    display: flex;
 }
 @media (min-width: 10.5625rem) {
 
     /* header */
     .header{
         display: flex;
-        width: 97%;
+        width: 99%;
         background-color: #206e9b;
         justify-content: space-between;
         padding: 0.3rem;
@@ -58,20 +61,6 @@ html{
         color: #ffff;
     }
 
-    .userinfo{
-        color: #fff;
-    }
-
-    /* aside */
-
-    .aside{
-        display: flex;
-        background-color: #888888;
-        padding: 0.2rem;
-        flex-direction: row;
-        overflow-y: auto;
-    
-    }
 
 }
 
