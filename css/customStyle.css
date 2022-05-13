@@ -2,4 +2,14 @@
     content: '+';
 }
 
+.overflow-x{
+    overflow-x: scroll;
+}
+.overflow-y{
+    overflow-y: scroll;
+}
 
+.scroll-area-sm {
+    height: 480px;
+    overflow-x: hidden;
+}
