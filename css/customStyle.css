@@ -1,59 +1,15 @@
-main{
-    max-height: 100vh;
-}
+
 .bg-dark{
     background-color: #0c6396!important;
 }
-
-.bord{
-    margin-bottom: 8px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding: 8px;
-    -webkit-user-select: none;
-    user-select: none;
-    white-space: nowrap;
-    width: 345px;
-}
-
-
-.card{
-    box-sizing: border-box;
-    display: inline-block;
-    height: 100%;
-    margin: 0 4px;
-    vertical-align: top;
-    white-space: nowrap;
-    width: 272px;
-}
-
-.tasck{
-    background-color: #ebecf0;
-    border-radius: 3px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-    position: relative;
-    white-space: normal;
-    width: 100%!important;
-}
-
 .card-header{
-    min-height: 20px;
-    padding: 10px 8px;
-    position: relative;
-}
-.card-body{
-    margin: 0 4px;
-    min-height: 0;
-    max-height: 30px;
-    padding: 0 4px;
+    border: unset;
+    background-color: unset;
 }
 
-.card-footer{
-    display: flex;
-    justify-content: space-between;
-    max-height: 38px;
-    min-height: 38px;
+.card-body{
+    background-color: rgba(163, 163, 163, 0.144);
+    border-radius: 5px;
+    height: 77vh;
 }
+
