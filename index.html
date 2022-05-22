@@ -2,65 +2,203 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TODO</title>
-  <link rel="icon" href="./images/checkboxicon.png">
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/customStyle.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/customStyle.css">
 
-  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <!-- <script src="./js/main.js"></script> -->
 </head>
 
 <body>
-  <header class="p-3 bg-dark text-white">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <div class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="images/todologo.png" alt="logo" width="40px">
-        </div>
 
-        <ul class="nav col-12 col-sm-4 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-
-        </ul>
-
-        <form class="col-12 col-sm-4 d-none d-sm-inline col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-        </form>
-
-        <!-- <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
-        </div> -->
-
-
-        <div class="flex-shrink-0 dropdown">
-          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="./images/profile.png" alt="mdo" width="32" height="32" class="rounded-circle">
-          </a>
-          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
+  <header>
+    <nav class="navbar bg-light fixed-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">TODO</a>
+        <a class="navbar-brand" href="#">Time</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link text-center" aria-current="page" href="#">profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">name</a>
+              </li>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <main class="bg-light">
-  <div class="container-fluid">
-      <div class="row p-3">
-        
+  <main>
+
+    <div class="container-fluid m-5 p-2 rounded mx-auto bg-light">
+      <div id="row" class="row m-1 p-3 text-nowrap scroll-area py-5">
+
+
+
+
+
+
+        <div class="col-12 col-sm-4 order-5">
+          <form id="create-list">
+            <div class="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
+
+              <div class="col">
+                <input class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded" type="text"
+                  placeholder="Add new ...">
+              </div>
+
+              <div class="col-auto px-0 mx-0">
+
+                <button class="btn btn-primary">Add</button>
+
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+
       </div>
     </div>
+
+
   </main>
 
+
+
+
+  <!-- JavaScript Bundle with Popper -->
   <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.querySelector("form#create-list").onsubmit = (event) => {
+      event.preventDefault();
+
+      const value = document.querySelector("form#create-list input").value;
+
+      if (value.trim() === "") {
+        alert("value can`t be Empty!!");
+        return;
+      }
+
+      // create card
+      const gride = document.createElement('div');
+      gride.classList.add('col-12', 'col-sm-4');
+      const grideId = document.createAttribute('id');
+      grideId.value = 'gride';
+      gride.setAttributeNode(grideId);
+
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      //   card header
+      const cardHeader = document.createElement("div");
+      cardHeader.classList.add("card-header", "position-relativ", "inpout-group");
+
+      const cardTilte = document.createElement("div");
+      cardTilte.classList.add('form-control', 'border-0', 'bg-light');
+      cardTilte.innerHTML = value;
+
+      const cardDelete = document.createElement("button");
+      cardDelete.classList.add("btn", "btn-outline-danger", "fw-bolder", "button-delete");
+      cardDelete.innerHTML = 'X';
+
+
+
+
+      //   card body
+      const cardbody = document.createElement("div");
+      cardbody.classList.add("card-body", "text-wrap", "scroll", "scroll-area-sm");
+
+      //   card footer
+      const formAddToList = document.createElement('form');
+      const formId = document.createAttribute('id');
+      formId.value = 'formAddToList';
+      formAddToList.setAttributeNode(formId);
+
+      const cardfooter = document.createElement("div");
+      cardfooter.classList.add("card-footer", "position-relativ", "input-group");
+
+      const addToLiast = document.createElement('input');
+      addToLiast.classList.add('form-control', 'border-0');
+      const placeholder = document.createAttribute('placeholder');
+      placeholder.value = 'add to list';
+      addToLiast.setAttributeNode(placeholder);
+
+      const addListbtn = document.createElement('button');
+      addListbtn.classList.add('btn', 'btn-outline-primary', 'fw-bolder');
+      addListbtn.innerHTML = 'Add';
+      const type = document.createAttribute('type');
+      type.value = 'submit';
+      addListbtn.setAttributeNode(type);
+
+
+      //   ------------
+
+      document.querySelector("#row").appendChild(gride);
+      document.querySelector("#gride").appendChild(card);
+
+      document.querySelector(".card").appendChild(cardHeader);
+      document.querySelector(".card-header").appendChild(cardTilte);
+      document.querySelector(".card-header").appendChild(cardDelete);
+
+      document.querySelector(".card").appendChild(cardbody);
+
+      document.querySelector('.card').appendChild(formAddToList);
+      document.querySelector("#formAddToList").appendChild(cardfooter);
+      document.querySelector(".card-footer").appendChild(addToLiast);
+      document.querySelector(".card-footer").appendChild(addListbtn);
+
+
+      document.querySelector('#formAddToList').onsubmit = (event) => {
+        event.preventDefault();
+        const valueList = document.querySelector('#formAddToList input').value;
+
+        if (value.trim() === "") {
+          alert("value can`t be Empty!!");
+          return;
+        }
+
+        // card list
+        const cardList = document.createElement('div');
+        cardList.classList.add('card-text', 'p-2', 'my-2', 'shadow', 'bg-light', 'position-relative');
+        cardList.innerHTML = valueList;
+
+        const deleteItem = document.createElement('span');
+        deleteItem.classList.add('position-absolute', 'top-0', 'start-100', 'translate-middle', 'badge', 'rounded-pill', 'bg-danger');
+        deleteItem.innerHTML = 'X';
+        const spamID = document.createAttribute('id');
+        spamID.value = 'deleteItem';
+        deleteItem.setAttributeNode(spamID);
+
+
+
+
+        document.querySelector(".card-body").appendChild(cardList);
+        document.querySelector(".card-text").appendChild(deleteItem);
+
+
+      }
+
+    };
+  </script>
+
+  
+
 </body>
 
 </html>
