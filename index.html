@@ -18,7 +18,7 @@
     <nav class="navbar bg-light fixed-top shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">TODO</a>
-        <a class="navbar-brand" href="#">Time</a>
+        <p id="demo" class="navbar-brand">Time</p>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -85,6 +85,13 @@
   <script src="js/bootstrap.bundle.min.js"></script>
 
   <script>
+    let mytimer = setInterval(myFunction, 1000);
+
+    function myFunction() {
+      let setTime = new Date();
+      document.getElementById('demo').innerHTML = setTime.toLocaleTimeString();
+    }
+
     document.querySelector("form#create-list").onsubmit = (event) => {
       event.preventDefault();
 
@@ -197,7 +204,7 @@
     };
   </script>
 
-  
+
 
 </body>
 
