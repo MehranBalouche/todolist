@@ -5,92 +5,36 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <title>Material Design for Bootstrap</title>
+    <title>ToDo.mb</title>
     <!-- MDB icon -->
-    <link rel="icon" href="img/unnamed.png" type="image/x-icon"/>
+    <link rel="icon" href="img/small-icon.png" type="image/x-icon"/>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <!-- Google Fonts Roboto -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css"/>
     <!-- me style -->
     <link rel="stylesheet" href="css/mystyle.css">
+    <!-- JQuery -->
+    <script defer src="./js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 <!-- Start your project here-->
 <!-- header -->
 <header class="fixed-top mb-4">
-    <div class="bg-white border-bottom p-3">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- start left section -->
-                <div class="col-md-5 d-flex justify-content-start d-none d-lg-flex align-items-center">
-                    <a href="#" class="text-reset mx-1"><i class="fab fa-microsoft"></i></a>
-                    <a href="#" class="text-reset mx-1"><i class="fas fa-home"></i></a>
-                    <a href="#" class="text-reset mx-1"><i class="fas fa-columns"></i><span
-                            class="d-none d-xl-inline-block">&nbsp; Boards</span></a>
-                    <form class="d-flex input-group input-group-sm w-auto me-3">
-                        <input type="search" class="form-control rounded" placeholder="Type query" aria-label="Search"/>
-                        <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
-                    </form>
-                </div>
-                <!-- end left section -->
-                <!-- start center section -->
-                <div class="col-md-2 d-none d-lg-block">
-                    <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-                        <img src="./img/unnamed.png" height="20"
-                             alt="ToDo Logo"
-                             loading="lazy" style="margin-top: 2px;"/>
-                    </a>
-                </div>
-                <!-- end center section -->
-                <!-- start right section -->
-                <div class="col-md-5 d-flex justify-content-end align-items-center">
-                    <a href="#" class="text-reset mx-1"><i class="fas fa-plus"></i></a>
-                    <a href="#" class="text-reset mx-1"><i class="fas fa-info-circle"></i></a>
-                    <a href="#" class="text-reset mx-1"><i class="fas fa-bell"></i></a>
-                    <!-- start avatar into navbar -->
-                    <ul class="navbar-nav mx-1">
-                        <!-- Avatar -->
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
-                           id="navbarDropdownMenuLink"
-                           role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
-                                 height="22"
-                                 alt="Portrait of a Woman" loading="lazy"/>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item" href="#">My profile</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Settings</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Logout</a>
-                            </li>
-                        </ul>
-                    </ul>
-                        <!-- end avatar -->
-                </div>
-                <!-- end right section -->
-            </div>
-        </div>
-    </div>
-    <!-- secrnd navbar -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <div class="d-flex align-items-center">
-                <button type="button" class="d-none btn btn-outline-primary"><i
-                        class="fas fa-clipboard-list me-1"></i>&nbsp;Boards
-                </button>
-                <button type="button" class="d-none btn btn-outline-primary border-0 mx-1 px-2"
-                        data-mdb-ripple-color="dark">
-                    <h5 class="m-0">MDB</h5>
-                </button>
+<!--                <button type="button" class="d-none btn btn-outline-primary"><i-->
+<!--                        class="fas fa-clipboard-list me-1"></i>&nbsp;Boards-->
+<!--                </button>-->
+<!--                <button type="button" class="d-none btn btn-outline-primary border-0 mx-1 px-2"-->
+<!--                        data-mdb-ripple-color="dark">-->
+<!--                    <h5 class="m-0">MDB</h5>-->
+<!--                </button>-->
 
                 <button type="button" class="btn btn-outline-primary mx-1 px-2" data-mdb-ripple-color="dark">
                     <i class="fas fa-star"></i>
@@ -133,11 +77,61 @@
                         class="fas fa-user-plus me-2"></i>&nbsp; Invite
                 </button>
             </div>
+            <div >
+                <div class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+                    <img src="./img/unnamed.png" height="20"
+                         alt="ToDo Logo"
+                         loading="lazy" style="margin-top: 2px;"/>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+<!--                <button type="button" class="btn btn-outline-primary text-capitalize" data-mdb-ripple-color="dark"><i-->
+<!--                        class="fas fa-bars mx-1"></i> show menu-->
+<!--                </button>-->
 
-            <div>
-                <button type="button" class="btn btn-outline-primary text-capitalize" data-mdb-ripple-color="dark"><i
-                        class="fas fa-bars mx-1"></i> show menu
+
+                <form class="d-flex input-group input-group-sm w-auto me-3">
+                    <input type="search" class="form-control rounded" placeholder="Type query" aria-label="Search"/>
+                    <span class="input-group-text border-0"><i class="fas fa-search fs-6"></i></span>
+                </form>
+
+                <button class="mx-2 border-0 bg-unset"  data-bs-toggle="modal" data-bs-target="#profileModal">
+                    <img src="https://mdbootstrap.com/img/new/avatars/1.jpg" alt="avatars-teams"
+                         class="border rounded-circle"
+                         style="height: 30px;">
                 </button>
+                    <!-- Modal-->
+                <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body d-flex align-content-end">
+
+                                <img width="45" class="img-fluid rounded-circle me-2" src="https://mdbootstrap.com/img/new/avatars/1.jpg" alt="">
+                                <div>
+                                    <h6 class="fs-6 fw-bold text-gray-600 mb-0">مهران</h6>
+                                    <p class="fs-8 text-gray-600 mb-0">mehran@gmail.com</p>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button
+                                        type="button"
+                                        class="btn btn-primary"
+                                        data-mdb-toggle="tooltip"
+                                        data-mdb-placement="left"
+                                        title="خروج از حساب کاربری"
+                                >
+                                    <i class="fas fa-sign-out-alt"></i>
+<!--                                    <i class="fas fa-sign-in-alt"></i>-->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </nav>
@@ -149,58 +143,29 @@
 <main class="bg-image">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
 
-        <section class="overflow-auto scrollbar-primary d-flex align-items-start h-100"
-                 data-mdb-perfect-scrollbar='true' style="position: relative;"
-                 data-sortable="sortable">
+        <section
+                class="overflow-auto scrollbar-info d-flex align-items-start h-100"
+                 data-mdb-perfect-scrollbar='true'
+                 style="position: relative;"
+                 data-sortable="sortable" id="section">
 
-            <div class="card shadow-1-strong m-3 p-2 pb-0">
-                <div class="card-header d-flex justify-content-between ps-1 pe-0 pb-3 border-0">
-                    <p class="mb-0"><strong>title 1</strong></p>
-                    <button class="btn btn-link text-reaset m-0 py-0 px-2" data-mdb-ripple-color="dark"><i
-                            class="fas fa-ellipsis-h"></i></button>
-                </div>
-                <div class="overflow-auto scrollbar-primary" style="max-height: 60vh;">
-                    <div class="card-body rounded bg-white shadow-2 mb-2">item 1</div>
-                    <div class="card-body rounded bg-white shadow-2 mb-2">item 2</div>
-                    <div class="card-body rounded bg-white shadow-2 mb-2">item 3</div>
-                </div>
-                <div class="card-footer input-group">
-<!--                    <button class="btn btn-link btn-block text-reset" data-mdb-ripple-color="dark" type="button"><i-->
-<!--                            class="fas fa-plus"></i> -->
-<!--                    </button>-->
 
-                    <input type="text" class="form-control" placeholder="add another card" />
-                    <button class="btn btn-primary m-0 py-0 px-3" data-mdb-ripple-color="dark"><i class="fas fa-plus fa-lg"></i></button>
-                </div>
-            </div>
-
-            <div class="input-group c-bord m-3 p-2 pb-0">
-                <input type="text" class="form-control" placeholder="add new list" />
+                <!--add new list -->
+            <form id="FL" class="input-group c-bord m-3 p-2 pb-0 order-5">
+                <input id="demo" type="text" class="form-control" placeholder="add new list" />
                 <button class="btn btn-primary m-0 py-0 px-3" data-mdb-ripple-color="dark"><i class="fas fa-plus fa-lg"></i></button>
-            </div>
+            </form>
 
         </section>
 
     </div>
 </main>
 <!-- start main section -->
-
 <!-- End project here-->
-
-
 <!-- MDB -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- Custom scripts -->
-<script type="text/javascript">
-    var myCustomScrollbar = document.querySelector('.my-custom-scrollbar');
-    var ps = new PerfectScrollbar(myCustomScrollbar);
-
-    var scrollbarY = myCustomScrollbar.querySelector('.ps__rail-y');
-
-    myCustomScrollbar.onscroll = function () {
-        scrollbarY.style.cssText = `top: ${this.scrollTop}px!important; height: 400px; right: ${-this.scrollLeft}px`;
-    }
-</script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

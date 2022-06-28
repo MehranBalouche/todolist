@@ -3,6 +3,50 @@
     height: 100vh;
 }
 
+/*utlity*/
+
+.bg-unset{
+    background: unset;
+}
+.lh-0{
+    line-height: 0px !important;
+}
+/*over write bootstrap class*/
+.modal-backdrop{
+    z-index: 999;
+}
+.modal{
+    padding-top: 80px;
+}
+
+.modal-footer{
+    border: none;
+}
+.modal-header{
+    border: none;
+}
+.modal{
+    top: 40px;
+}
+/*custom style*/
+element.style {
+}
+.modal-backdrop.show {
+    opacity: .5;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+}
+
+element.style {
+}
+.modal-backdrop.show {
+    opacity: .5;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+}
+
 body,main{
     height: 100%;
 }
@@ -10,7 +54,7 @@ body,main{
 .mask{
     padding-top: 58px;
 }
-@media (min-width: 992px) {
+@media (max-width: 768px) {
     .mask{
         padding-top: 121.27px;
     }
@@ -27,6 +71,28 @@ body,main{
     max-width: 300px;
     height: auto;
 }
+
+.trash-icon{
+    position: absolute;
+    right: 0.2rem;
+    top: -0.1rem;
+    background-color: #ebecf0;
+    border: 1px solid #ebecf0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.trash-icon i{
+    font-size: 0.8rem;
+    color: #0e52c1;
+}
+.btn-floating .fab, .btn-floating .far, .btn-floating .fas{
+    width: unset!important;
+    line-height: unset!important;
+}
+
+
 input{
     outline: unset!important;
 }
@@ -40,7 +106,7 @@ input{
 }
 
 .scrollbar-primary::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
     background-color: #F5F5F5;
 }
 
@@ -61,7 +127,7 @@ input{
 }
 
 .scrollbar-danger::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
     background-color: #F5F5F5;
 }
 
@@ -82,7 +148,7 @@ input{
 }
 
 .scrollbar-warning::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
     background-color: #F5F5F5;
 }
 
@@ -103,7 +169,7 @@ input{
 }
 
 .scrollbar-success::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
     background-color: #F5F5F5;
 }
 
@@ -124,7 +190,8 @@ input{
 }
 
 .scrollbar-info::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
+    height: 8px;
     background-color: #F5F5F5;
 }
 
@@ -145,7 +212,7 @@ input{
 }
 
 .scrollbar-default::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
     background-color: #F5F5F5;
 }
 
@@ -166,7 +233,7 @@ input{
 }
 
 .scrollbar-secondary::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
     background-color: #F5F5F5;
 }
 
